@@ -10,16 +10,16 @@
 | 6.2 `make_docs.py` | ✅ 11 篇 TXT＋`td235-docs.zip`（已上 Drive，檔案 ID `1I6bknLAUu3dU6QvowY6LuZOwqRO3SXin`）。中文標題與練習問題是 AI 初稿，**待 Roger 確認**（`ocr/annotations_zh.md`） |
 | 6.3 `RAG01.ipynb` | ✅ 在 Colab T4（學校帳號）整份跑過，老師的檢查全部通過 |
 | `rag-data.zip` | ✅ 28,322 bytes，sha256 `df8650a0…`。已上 Drive，檔案 ID `1_-jACKgzovK9Pmrdkmq1jNG23Fs_c258`；用 `urllib`、不登入實測可下載，sha256 和本機相同 |
-| 6.4 `RAG02.ipynb` | ✅ Roger 在 Colab 網頁「全部執行」跑通到 Gradio（真的呼叫 Groq），已重跑一次確認粗體、圖所在頁、少補步驟有改善。之後新增 `normalize_citations()`（模型堅持寫【doc_009】），**這版還沒在 Colab 上跑** |
+| 6.4 `RAG02.ipynb` | ✅ Colab 網頁「全部執行」跑通（真的呼叫 Groq）。**繳交用的 Colab 連結**：`https://colab.research.google.com/drive/1xaXf3ZbpQBZZU-ZBNK1ZhHHMU-V8RCOw?usp=sharing`（Drive 檔案 ID `1xaXf3ZbpQBZZU-ZBNK1ZhHHMU-V8RCOw`；不登入可下載，已確認內容和 repo 的 `RAG02.ipynb` 相同、輸出沒有金鑰） |
 | 7.1 人設 | ❌ `RAG02.ipynb` 第 9 節的 `PERSONA` 是暫時的中性句子，由 Roger 撰寫 |
 | 8.1／8.2 | 🔶 初步數據在 `docs/retrieval-eval.md`（用的是待確認的練習問題）。**還沒寫成 RAG01 的新增 cell** |
-| 8.3～8.5 | 8.5（頁碼與圖號提示）已併進 RAG02 第 12 節；8.3、8.4 還沒做 |
-| 截圖（第 10 節） | 節點 1、4、6 ✅；節點 2、3 待截；節點 8 等修正後重跑再截 |
-| git | `main` 已 push 到 GitHub。本次的改動**還沒 commit** |
+| 8.3～8.5 | ✅ 都在 RAG02：8.5 在第 12 節；8.3（Gradio 勾選並排純 LLM）、8.4（門檻 0.62）在新增的第 15.1 節＋第 16 節。Colab 網頁實測：門檻擋下「藍牙」✅；勾選對照並排 ✅（純 LLM 編出「220 V ±10%」，和說明書的 100–240 V 矛盾） |
+| 截圖（第 10 節） | 節點 1、4、6、8 ✅＋門檻、並排對照 ✅；節點 2、3 待截 |
+| git | 改動都已 commit；GitHub 上停在 `6a2474c`，之後的 commit **還沒 push** |
 
 ## 二、等 Roger 處理的
 
-1. **Colab 上的 RAG02 要更新成最新版**：Drive 的 Colab Notebooks 裡對 `RAG02.ipynb` 按右鍵 →「檔案資訊 → 管理版本 → 上傳新版本」（**先關掉 Colab 分頁**，不然自動儲存可能把舊版存回去）。可以等 8.3／8.4 改完再一起更新。重跑後看狀態列是否不再誤報「回答未附文件編號」，截圖當節點 8 的「修正後」。以後在 Colab 網頁上改的內容要下載回 repo
+1. 以後本機改了 RAG02，就到 Drive 用「管理版本 → 上傳新版本」更新（**先關掉 Colab 分頁**），連結不變；在 Colab 網頁上改的內容要下載回 repo
 2. **寫人設**（7.1）：取代 RAG02 第 9 節的 `PERSONA`。需要的話 Claude 可以提 2～3 個方向。定稿 prompt 時一起處理：模型仍會在結尾加「請參考官方維修手冊」（規則 3 已寫明不要，它還是寫；見 `docs/ai-usage-log.md`）
 3. **校對母本**、**確認 `ocr/annotations_zh.md`**（同上次）。練習問題是檢索評估的測試題，定稿後要重跑評估
 4. 截圖節點 2、3
@@ -27,8 +27,8 @@
 ## 三、下一步（Claude）
 
 1. **8.1／8.2 寫成 RAG01 的新增 cell**（第 13 節後，標「🔧 新增」）：練習問題 → top-1／top-3 命中率表；A/B 另建暫時索引比較，不影響匯出的索引。練習問題定稿後在 T4 上重跑，結果更新到 `docs/retrieval-eval.md`
-2. **8.4 門檻**：初步數據顯示說明書沒寫但跟唱盤有關的問題（轉速、清潔）分數和有答案的題目一樣高，門檻只能擋明顯離題的問題。設計和說明要照這個事實寫（見 `docs/retrieval-eval.md`）
-3. **8.3**：純 LLM／RAG 對照搬進 Gradio
+2. **8.4 門檻**：暫定 0.62（依據在 RAG02 第 15.1 節和 `docs/retrieval-eval.md`）。8.1 正式評估時加更多離題題、口語寫法，重新檢查這個值
+3. 8.6 多輪對話、8.7 第二知識來源都是選做，**要先問 Roger**
 4. 每次改完 RAG02，用測試版在 CLI 上跑一次（做法見第四節）
 
 **重建規則**：母本或 `annotations_zh.md` 有改 → 跑 `make_docs.py` → zip 的 sha256 有變，就到 Drive 用「管理版本 → 上傳新版本」覆蓋（檔案 ID 不變）→ 從 RAG01 第 7 節起重建 → 新的 `rag-data.zip` 也用同樣方式更新到 Drive。
