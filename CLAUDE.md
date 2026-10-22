@@ -1,6 +1,7 @@
 # TD 235 RAG 對話機器人 — TAICA 生成式AI 作業
 
 > 給 Claude 的專案說明。每次開始工作前先讀完這份文件；第 2 節「評分底線」優先於其他所有考量。
+> **目前進度、待辦與環境細節在 `HANDOFF.md`**，讀完這份接著讀它。
 
 ---
 
@@ -48,6 +49,7 @@ TAICA「生成式AI：文字與圖像生成的原理與實務」（政大蔡炎�
 ```
 td235-rag/
 ├── CLAUDE.md
+├── HANDOFF.md                      # 目前進度、待辦、環境（跨機器交接用）
 ├── reference/                      # 老師範例（唯讀，不要修改）
 │   ├── RAG_01_打造你的_RAG_系統.ipynb
 │   └── RAG_02_使用篇.ipynb
@@ -274,7 +276,8 @@ Instead of the factory-supplied pick-up cartridge any other cartridge with ...
 | 第 3 節上傳 | 改成**從網址下載** `td235-docs.zip`（`DOCS_ZIP_URL`），保留 `files.upload()` 當註解備案。後面的解壓與安全檢查沿用老師的程式 |
 | 第 5 節 `extract_rag_text()` | 配合 6.2 的格式（老師的正規式大致可直接用）；依實驗結果決定要不要把 `中文標題` 併進 text |
 | 第 6 節 `extract_metadata()` | 欄位改成：`title`、`title_zh`、`page`（int）、`figures`、`source`、`filename`、`document_type`。找不到就填 `None`，不要捏造 |
-| 第 13 節試查 | `QUESTION` 改成 TD 235 的中文問題，例如「唱頭的線要怎麼接？」「唱針多久要換？」 |
+| 第 7 節批次整理 | （2026-10-22 補）老師的顯示程式直接讀 `metadata["source_url"]`／`["date"]`，換欄位後會 KeyError，所以列表改顯示中文標題、頁碼、相關圖，缺漏檢查改成 `title_zh`／`page`／`source` |
+| 第 13 節試查 | `QUESTION` 改成 TD 235 的中文問題，例如「唱頭的線要怎麼接？」「唱針多久要換？」；顯示「來源網址」改成「頁碼」 |
 | 新增 cell（第 13 節後） | 檢索評估（見第 8 節）——標示「🔧 新增」 |
 
 保留老師所有的檢查機制（token 長度、NaN、sha256、保存前後排名一致），這些也是展示程式品質的地方。
@@ -409,11 +412,14 @@ if not zipfile.is_zipfile(io.BytesIO(zip_bytes)):
 ## 11. 工作流程與環境
 
 - 在 VS Code 本機編輯 `.ipynb`，透過 Colab CLI 連到 Colab runtime 執行。**CLI 指令以實際 `--help` 輸出為準**，不要假設
+  - CLI 是 Google 的 `google-colab-cli`（`uv tool install google-colab-cli`），先讀 `colab skill`。執行 notebook：`colab exec -s <名稱> -f RAG01.ipynb`（結果寫到 `RAG01_output.ipynb`）；用完要 `colab stop`
+  - 這個專案用 **Roger 的學校帳號**（f74146115@gs.ncku.edu.tw）的 Colab，登入要 Roger 本人在瀏覽器完成。ROG 的 WSL 裡那份 CLI 登入的是個人 Pro 帳號
 - RAG01 建庫建議用 GPU runtime（T4 就夠，會自動用 float32）
 - 每次改了文件或擷取函式，要從 RAG01 第 7 節起重建並重新匯出。**不要混用舊索引與新文件**（老師的提醒）
 - 重新匯出 `rag-data.zip` 後，要更新 Drive 上的檔案。**更新時用「管理版本 → 上傳新版本」，保持同一個檔案 ID**，否則 RAG02 的網址會失效
 - **最終驗證**：在 Colab 網頁上「執行階段 → 重新啟動並執行全部」。最好用另一個 Google 帳號（模擬助教）開啟共用連結，並設定 `Groq` secret 測試一次
 - 專案用 git 管理並推到 GitHub。commit 前檢查沒有 key
+  - 遠端：`https://github.com/RogerH0711/td235-rag`（private）。ROG 透過 SSH 連入時不能 push（讀不到 Windows 認證管理員、沒有 GitHub SSH key），要從 Mac 或 ROG 桌面 push
 
 ---
 

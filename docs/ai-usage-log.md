@@ -101,3 +101,21 @@
 - **我的理解**：（待填）
 
 ---
+
+## 2026-10-22 建立 git repo、改寫 RAG01.ipynb
+
+- **我的 Prompt**：回答 Claude 的兩個問題：`td235-docs.zip` 放 Google Drive；建 git repo 並做第一個 commit
+- **Claude 做了什麼**：
+  - `git init`，commit 前掃描過沒有金鑰，`source_pdf/`、`ocr/pages/`、`.venv/` 都排除；新增 `.gitattributes`，讓 Windows 與 macOS 的文字檔都用 LF。第一個 commit：`63b5d42`（沒有 push）
+  - 用一支轉換腳本，從 `reference/` 老師的 RAG_01 產生 `RAG01.ipynb`：只改 6 格 code（設定、下載、範例篇號、`extract_metadata`、批次整理的顯示、試查）和相關的 Markdown 說明，清掉老師的執行輸出；embedding、FAISS、保存、驗證、打包的 cell 一字未改
+  - 在本機把 Colab、torch 換成假的模組，實際執行不需要模型的 cell（設定 → 下載解壓 → 擷取 → 批次整理），11 篇都正確讀出
+  - 我上傳 `td235-docs.zip` 到 Drive 後，Claude 把分享連結轉成直接下載網址填進 `DOCS_ZIP_URL`，用沒有登入狀態的 Python 實測可以下載，sha256 和本機的 zip 相同
+- **關鍵程式碼白話解釋**：
+  - 下載（第 3 節）：用 Python 內建的 `urllib.request` 從 Drive 下載 zip，取代 `files.upload()`。下載完先用 `zipfile.is_zipfile()` 確認真的是 zip，因為 Drive 權限沒開時會回傳一個 HTML 登入頁，不檢查的話錯誤訊息會很難懂。之後的解壓和安全檢查都是老師的程式
+  - `extract_rag_text()` 沒改：TXT 的格式在 `make_docs.py` 就照老師的欄位設計，所以老師的正規式直接能用
+  - `extract_metadata()`：老師的教材有來源網址和日期，說明書沒有，改成記頁碼（轉成整數）、中文標題、相關圖。相關圖用正規式 `Fig\.\s*(\d+)\s*\(p\.(\d+)\)` 把「Fig. 7 (p.8)」拆成 `{"figure": 7, "page": 8}`；如果欄位有寫但沒拆完整，就直接報錯，不默默漏掉
+  - 為什麼第 7 節也要改：老師的列表程式直接讀 `metadata["source_url"]`，這個欄位不存在了，不改會 KeyError
+- **需要截圖**：**是**（關鍵節點 3：改好的 `extract_rag_text`／`extract_metadata`）。建議在 Colab 實際執行後，截第 5、6 節的程式和輸出
+- **我的理解**：（待填）
+
+---
