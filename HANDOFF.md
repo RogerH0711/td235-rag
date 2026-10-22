@@ -10,17 +10,17 @@
 | 6.2 `make_docs.py` | ✅ 11 篇 TXT＋`td235-docs.zip`（已上 Drive，檔案 ID `1I6bknLAUu3dU6QvowY6LuZOwqRO3SXin`）。中文標題與練習問題是 AI 初稿，**待 Roger 確認**（`ocr/annotations_zh.md`） |
 | 6.3 `RAG01.ipynb` | ✅ 在 Colab T4（學校帳號）整份跑過，老師的檢查全部通過 |
 | `rag-data.zip` | ✅ 28,322 bytes，sha256 `df8650a0…`。已上 Drive，檔案 ID `1_-jACKgzovK9Pmrdkmq1jNG23Fs_c258`；用 `urllib`、不登入實測可下載，sha256 和本機相同 |
-| 6.4 `RAG02.ipynb` | ✅ 已改寫，`RAG_ZIP_URL` 已填。在 Colab CPU 用測試版跑過（假 Groq client、不啟動 Gradio）；**真正呼叫 Groq 還沒測**（CLI 讀不到 Colab Secrets） |
+| 6.4 `RAG02.ipynb` | ✅ Roger 在 Colab 網頁「全部執行」跑通到 Gradio（真的呼叫 Groq），已重跑一次確認粗體、圖所在頁、少補步驟有改善。之後新增 `normalize_citations()`（模型堅持寫【doc_009】），**這版還沒在 Colab 上跑** |
 | 7.1 人設 | ❌ `RAG02.ipynb` 第 9 節的 `PERSONA` 是暫時的中性句子，由 Roger 撰寫 |
 | 8.1／8.2 | 🔶 初步數據在 `docs/retrieval-eval.md`（用的是待確認的練習問題）。**還沒寫成 RAG01 的新增 cell** |
 | 8.3～8.5 | 8.5（頁碼與圖號提示）已併進 RAG02 第 12 節；8.3、8.4 還沒做 |
-| 截圖（第 10 節） | 節點 1、4 ✅；節點 2、3 待截 |
+| 截圖（第 10 節） | 節點 1、4、6 ✅；節點 2、3 待截；節點 8 等修正後重跑再截 |
 | git | `main` 已 push 到 GitHub。本次的改動**還沒 commit** |
 
 ## 二、等 Roger 處理的
 
-1. **在 Colab 網頁上跑 RAG02**：用學校帳號開 Colab →「檔案 → 上傳筆記本」選 repo 裡的 `RAG02.ipynb`（會存進 Drive 的 Colab Notebooks，之後繳交的 Colab 連結就是它；本機改版後要更新時，用 Drive 的「管理版本」上傳新版，連結才不會變；在 Colab 網頁上改的內容要下載回 repo）→ Colab Secrets 加上 `Groq`、開啟 notebook 存取權 →「全部執行」→ 在 Gradio 試 7.3 的問題，特別是「轉速偏慢要怎麼調？」。這也是截圖節點 6
-2. **寫人設**（7.1）：取代 RAG02 第 9 節的 `PERSONA`。需要的話 Claude 可以提 2～3 個方向
+1. **Colab 上的 RAG02 要更新成最新版**：Drive 的 Colab Notebooks 裡對 `RAG02.ipynb` 按右鍵 →「檔案資訊 → 管理版本 → 上傳新版本」（**先關掉 Colab 分頁**，不然自動儲存可能把舊版存回去）。可以等 8.3／8.4 改完再一起更新。重跑後看狀態列是否不再誤報「回答未附文件編號」，截圖當節點 8 的「修正後」。以後在 Colab 網頁上改的內容要下載回 repo
+2. **寫人設**（7.1）：取代 RAG02 第 9 節的 `PERSONA`。需要的話 Claude 可以提 2～3 個方向。定稿 prompt 時一起處理：模型仍會在結尾加「請參考官方維修手冊」（規則 3 已寫明不要，它還是寫；見 `docs/ai-usage-log.md`）
 3. **校對母本**、**確認 `ocr/annotations_zh.md`**（同上次）。練習問題是檢索評估的測試題，定稿後要重跑評估
 4. 截圖節點 2、3
 
