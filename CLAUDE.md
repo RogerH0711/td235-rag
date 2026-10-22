@@ -91,7 +91,7 @@ td235-rag/
 - 其他 import：`numpy`、`pandas`、`matplotlib`、`torch`、`faiss`、`sentence_transformers.SentenceTransformer`、`huggingface_hub.HfApi`、`google.colab.files`
 - **Embedding model**：`google/embeddinggemma-2`，載入時用 `HfApi().model_info(...).sha` 鎖定 revision
   - `config_kwargs={"vision_config": None, "audio_config": None}`、`attn_implementation="eager"`
-  - GPU 支援 bf16 才用 bfloat16，否則用 float32；**不可用 float16**（T4 會走 float32）
+  - GPU 支援 bf16 才用 bfloat16，否則用 float32；**不可用 float16**（2026-10-22 實測：Colab T4＋torch 2.11 的 `is_bf16_supported()` 回傳 True，所以 T4 實際用 **bfloat16**；老師 RAG01 第 2 節 Markdown 寫「T4 改用 float32」與實測不符，但那是老師的原文，不改）
 - **前綴模板**（不可更改）：
   - 文件：`DOCUMENT_TEMPLATE = "title: none | text: {text}"`
   - 問題：`QUERY_TEMPLATE = "task: search result | query: {question}"`
@@ -414,7 +414,7 @@ if not zipfile.is_zipfile(io.BytesIO(zip_bytes)):
 - 在 VS Code 本機編輯 `.ipynb`，透過 Colab CLI 連到 Colab runtime 執行。**CLI 指令以實際 `--help` 輸出為準**，不要假設
   - CLI 是 Google 的 `google-colab-cli`（`uv tool install google-colab-cli`），先讀 `colab skill`。執行 notebook：`colab exec -s <名稱> -f RAG01.ipynb`（結果寫到 `RAG01_output.ipynb`）；用完要 `colab stop`
   - 這個專案用 **Roger 的學校帳號**（f74146115@gs.ncku.edu.tw）的 Colab，登入要 Roger 本人在瀏覽器完成。ROG 的 WSL 裡那份 CLI 登入的是個人 Pro 帳號
-- RAG01 建庫建議用 GPU runtime（T4 就夠，會自動用 float32）
+- RAG01 建庫建議用 GPU runtime（T4 就夠，實測走 bfloat16，見 4.1）
 - 每次改了文件或擷取函式，要從 RAG01 第 7 節起重建並重新匯出。**不要混用舊索引與新文件**（老師的提醒）
 - 重新匯出 `rag-data.zip` 後，要更新 Drive 上的檔案。**更新時用「管理版本 → 上傳新版本」，保持同一個檔案 ID**，否則 RAG02 的網址會失效
 - **最終驗證**：在 Colab 網頁上「執行階段 → 重新啟動並執行全部」。最好用另一個 Google 帳號（模擬助教）開啟共用連結，並設定 `Groq` secret 測試一次

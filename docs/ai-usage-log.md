@@ -119,3 +119,42 @@
 - **我的理解**：（待填）
 
 ---
+
+## 2026-10-22 在 Colab 跑 RAG01、匯出 rag-data.zip、初步檢索評估
+
+- **我的 Prompt**：「繼續進行工作階段」
+- **Claude 做了什麼**：
+  - 用 Colab CLI（學校帳號）開 T4 session，整份執行 `RAG01.ipynb`，18 格都跑完，老師的檢查全部通過（檔案完整性、文件對照、索引維度、保存前後排名一致）
+  - 最後一格的 `files.download()` 在 CLI 下沒有作用（只輸出 `Javascript object`），改用 `colab download` 從 VM 取回 `rag-data.zip`（28,322 bytes，sha256 `df8650a0…`）
+  - 趁模型還在 kernel 裡，用練習問題做初步檢索評估和中文標題 A/B 實驗，結果記在 `docs/retrieval-eval.md`
+  - 發現 T4 實際用的是 bfloat16（不是 CLAUDE.md 原本寫的 float32），已更正 CLAUDE.md 和 RAG01 開頭說明
+- **關鍵程式碼白話解釋**：
+  - 檢索評估：每題練習問題都知道「正確答案在哪一篇」，所以可以算 top-1（第 1 名就是正確那篇）和 top-3（正確那篇在前 3 名）的命中率，把「看起來找得到」變成數字
+  - A/B 實驗：B 方案把中文標題加進要向量化的文字，重新算 11 個向量、另外建一個暫時的索引，用同一批問題比較命中率。兩個方案只差這一個地方，差異才能歸因到中文標題
+  - 門檻數據：FAISS 一定會回傳最像的幾篇，就算問題和說明書無關也一樣，所以要看「沒有答案的問題」分數有多高，才知道門檻能不能把它們擋掉
+- **需要截圖**：**是**（關鍵節點 4：第一次成功匯出 `rag-data.zip`）→ 已截：`docs/screenshots/截圖 2026-10-22 14.31.56.png`（`RAG01_output.ipynb` 第 15、16 節）
+- **我的理解**：（待填）
+
+---
+
+## 2026-10-22 改寫 RAG02.ipynb
+
+- **我的 Prompt**：「繼續進行工作階段」
+- **Claude 做了什麼**：
+  - 用一支一次性轉換腳本，從 `reference/` 老師的 RAG_02 產生 `RAG02.ipynb`：照 `CLAUDE.md` 6.4 只改 19 格（10 格 code、9 格 Markdown），其餘 22 格和老師的一字不差；清掉老師的執行輸出；notebook 設定從 A100 改成 CPU（助教不需要 GPU 配額）
+  - 改的地方：知識庫改從網址下載、表格顯示頁碼、問題換成 TD 235、`SYSTEM_PROMPT` 分成人設＋規則、證據不足的句子、來源改成「說明書頁碼〈章節〉＋📷 相關圖」、Gradio 的標題和範例
+  - 我把 `rag-data.zip` 上傳到 Drive 後，Claude 把分享連結轉成直接下載網址填進 `RAG_ZIP_URL`，用沒有登入狀態的 `urllib`（和 notebook 同樣的寫法）實測可以下載，sha256 和本機的 zip 相同
+  - 在 Colab CPU session 實測：Colab Secrets 從 CLI 讀不到（`Secrets can only be fetched when running from the Colab UI`），所以另外產生測試版——知識庫改讀 VM 上的檔案、Groq client 換成假的、不啟動 Gradio。19 格全部跑完，確認 config 驗證、搜尋、送給模型的參數（`groq:openai/gpt-oss-120b`、0.2、4096）、來源 HTML、`gradio_answer()`、介面建立都正常
+- **AI 寫的內容（要由我確認或修改）**：
+  - `SYSTEM_PROMPT` 的 10 條規則（第 1～3 條沿用老師，其餘照 `CLAUDE.md` 7.2 擬的）
+  - **人設 `PERSONA` 目前是暫時的中性句子，要由我自己寫**
+  - 第 7、13、14、16 節的範例問題
+- **關鍵程式碼白話解釋**：
+  - 為什麼 `SYSTEM_PROMPT` 拆成 `PERSONA` 和 `RULES`：人設是我的創作，規則是安全與正確性的底線。拆開後改人設不會不小心動到規則
+  - 第 9 條（`[校對註]`）：母本裡的校對註會一起送進模型，要告訴模型那是整理者加的、不是原廠寫的；原文前後不一致時（例如 1.5 mN 和 15 mN），要把不一致講出來，而不是自己挑一個
+  - `figure_hint()`：把 metadata 的 `[{"figure": 7, "page": 8}, ...]` 依頁碼分組，變成「請參考說明書 p.8 Fig. 7、Fig. 8、Fig. 9」。圖都印在德文頁，英文內文只寫 Fig. N，不提示的話使用者會翻錯頁
+  - `source_link()` 名字沒改：老師的 `sources_html()`、`documents_html()` 都呼叫它，保留名字就不用動那些地方；內容改成顯示頁碼，標題一樣經過 `html.escape`，避免文件文字變成 HTML 標籤
+- **需要截圖**：等我在 Colab 網頁上用自己的 `Groq` secret 跑通 Gradio 時再截（關鍵節點 6）
+- **我的理解**：（待填）
+
+---
