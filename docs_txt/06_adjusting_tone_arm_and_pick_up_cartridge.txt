@@ -1,0 +1,30 @@
+標題：Adjusting tone arm and pick-up cartridge
+中文標題：唱臂與唱頭調整（針壓、抗滑）
+頁碼：7
+相關圖：Fig. 5 (p.6), Fig. 6 (p.6)
+資料類型：Thorens TD 235 原廠操作說明書英文原文（OCR 後人工校對）
+來源：Thorens TD 235 Operating Instructions, p.7
+
+【內容】
+Turn the tracking force adjuster (1) to "0" and the anti-skating knob (2) counter-clockwise until it stops (Fig. 6).
+
+Screw the tonearm counter weight (3) onto the rear tonearm tube (Fig. 5).
+
+Unlock the tone arm (4) and move it a bit towards the centre of the platter. Bring the lift-lever (5) into position DOWN while holding back the tone arm (Fig. 6).
+
+By turning the counter weight (3) the tone arm can be precisely balanced in order to make it hover freely above the platter. Move the tone arm back to its rest. You can now adjust the tracking force (1) and the anti-skating force (2). Adjust to 1.5 mN for the factory-installed pick-up cartridge AT 95 E. As for the required anti-skating force refer to the table below:
+
+[校對註] 英文原文寫「1.5 mN」，但同頁下方表格為「1,5 = 15 mN」，德文版（p6）與法文版（p7 右欄）此處都寫「15 mN」。
+
+Scale  Tracking force  Anti-skating force
+1 = 10 mN 1
+1,25 = 12,5 mN 1,25
+1,5 = 15 mN 1,5
+2 = 20 mN 2
+2,5 = 25 mN 2,5
+3 = 30 mN 3
+
+【檢索練習問題】
+針壓要怎麼調？
+anti-skating 要設多少？
+唱臂要怎麼平衡？

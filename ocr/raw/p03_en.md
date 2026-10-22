@@ -1,0 +1,18 @@
+# Dear THORENS customer,
+
+Thank you very much for your confidence in our product, the record player TD 235. With the purchase of this device you have acquired a precision instrument for the purpose of playing back analogue records. This appliance however requires your attention with respect to set-up, placement and handling in order to achieve a flawless operation. The TD 235 has been designed and assembled completely in Germany which will guarantee you the highest quality to be maintained for years to come. Understandably, you want to listen to your beloved records right away but we strongly advise that you read these instructions attentively before proceeding with the setup, simply to ensure long-lasting listening pleasure. We have spared no efforts to pack all necessary information and comprehensive guidance into this manual, yet in the event that you have any further queries regarding your new record player please do not hesitate to ask your THORENS dealer for further assistance.
+
+Sincerely yours,
+THORENS TEAM
+
+# WARRANTY
+
+Legal warranty directives and regulations are to be applied here. In case a failure or malfunction occurs in your record player during the warranty period please inform your THORENS dealer or general representative and describe the malfunction that has occurred. If the malfunction cannot be remedied on site by sending you the respective user-serviceable spare part, you are kindly requested to send the unit in its original shipping box to the THORENS representative in your country. If the original shipping box is no longer in your possession your THORENS representative will be in the position to supply a new one for a small charge. Shipping costs to THORENS or to an authorized service centre must be prepaid because otherwise the parcel will be rejected upon arrival. After repair or service the unit will be returned to you free of charge. Whenever you ship this turntable kindly use the screws for the security during transportation.
+
+Any damage or malfunction caused by failure to observe the instructions contained in this manual as well as damages occurred in transport or shipping are not covered by this warranty. This warranty only covers the turntable and motor including power supply and mains transformer. The tone arm and pick-up cartridge are covered by the warranty of the respective manufacturer thereof.
+
+In the event that you have further queries or need assistance please do not hesitate to contact your authorised THORENS service.
+
+# WARNING!
+
+To prevent fire or shock hazard, do not expose this product rain or moisture.

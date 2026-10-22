@@ -1,0 +1,32 @@
+# Technical Data
+Measured values = typical values
+
+| Belt drive | electronic-controlled DC motor |
+| --- | --- |
+| Mains voltage (Mains set) | 100 – 240 V (AC) |
+| Line frequency | 50 / 60 Hz |
+| Power requirement | 1,5 W |
+| Platter speeds | 33 1/3, 45 U / min |
+| Wow and flutter (DIN/WRMS) | ± 0,07/0,04 % |
+| Platter | Ø 304 mm |
+| Signal-to-noise ratio (DIN 45 500) |  |
+| Rumble unweighted signal-to-noise ratio | 46 dB |
+| Rumble weights signal-to noise ratio | 72 dB |
+| Effective tonearm length | 211 mm |
+| Offset angle | 26° |
+| Overhang | 19,5 mm |
+| Tangential tracking error | 0,15° / cm Rad. |
+| Cartridge HiFi DIN 45 500 |  |
+| rot R right channel AT 95 E |  |
+| grün RG right channel ground |  |
+| blau GL left channel ground |  |
+| weiß L left channel |  |
+| Diamant stylus elliptical | ATN 95 E<br>0,4 x 0,7 µm |
+| Tracking force | 1,5 g / mN |
+| Frequency range | 20 Hz – 20000 Hz |
+| Output | 3,5 mV / 5 cms⁻¹ / 1 kHz |
+| Tracking capability (315 Hz) | 80 µm |
+| Cartridge weight | 5,7 g |
+| Total capacitance |  |
+| Tonearm leads and audio-cables | ca. 160 pF |
+| Dimensions (W x H x D) (mm) | 440 x 119 x 360 |

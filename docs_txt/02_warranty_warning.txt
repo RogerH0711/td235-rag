@@ -1,0 +1,22 @@
+標題：WARRANTY / WARNING!
+中文標題：保固說明與安全警告
+頁碼：3
+相關圖：
+資料類型：Thorens TD 235 原廠操作說明書英文原文（OCR 後人工校對）
+來源：Thorens TD 235 Operating Instructions, p.3
+
+【內容】
+WARRANTY
+Legal warranty directives and regulations are to be applied here. In case a failure or malfunction occurs in your record player during the warranty period please inform your THORENS dealer or general representative and describe the malfunction that has occurred. If the malfunction cannot be remedied on site by sending you the respective user-serviceable spare part, you are kindly requested to send the unit in its original shipping box to the THORENS representative in your country. If the original shipping box is no longer in your possession your THORENS representative will be in the position to supply a new one for a small charge. Shipping costs to THORENS or to an authorized service centre must be prepaid because otherwise the parcel will be rejected upon arrival. After repair or service the unit will be returned to you free of charge. Whenever you ship this turntable kindly use the screws for the security during transportation.
+
+Any damage or malfunction caused by failure to observe the instructions contained in this manual as well as damages occurred in transport or shipping are not covered by this warranty. This warranty only covers the turntable and motor including power supply and mains transformer. The tone arm and pick-up cartridge are covered by the warranty of the respective manufacturer thereof.
+
+In the event that you have further queries or need assistance please do not hesitate to contact your authorised THORENS service.
+
+WARNING!
+To prevent fire or shock hazard, do not expose this product rain or moisture.
+
+【檢索練習問題】
+唱臂和唱頭有在保固範圍內嗎？
+保固期間壞掉要怎麼送修？運費誰出？
+唱盤可以放在潮濕的地方嗎？

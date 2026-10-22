@@ -1,0 +1,39 @@
+標題：Technical Data
+中文標題：技術規格
+頁碼：13
+相關圖：
+資料類型：Thorens TD 235 原廠操作說明書英文原文（OCR 後人工校對）
+來源：Thorens TD 235 Operating Instructions, p.13
+
+【內容】
+Measured values = typical values
+
+Belt drive: electronic-controlled DC motor
+Mains voltage (Mains set): 100 – 240 V (AC)
+Line frequency: 50 / 60 Hz
+Power requirement: 1,5 W
+Platter speeds: 33 1/3, 45 U / min
+Wow and flutter (DIN/WRMS): ± 0,07/0,04 %
+Platter: Ø 304 mm
+Signal-to-noise ratio (DIN 45 500): Rumble unweighted signal-to-noise ratio 46 dB; Rumble weightes signal-to noise ratio 72 dB
+Effective tonearm length: 211 mm
+Offset angle: 26°
+Overhang: 19,5 mm
+Tangential tracking error: 0,15° / cm Rad.
+Cartridge: HiFi DIN 45 500, AT 95 E — rot R right channel; grün RG right channel ground; blau GL left channel ground; weiß L left channel
+[校對註] 藍色線在 p9 寫作「LG」（Blue, left channel ground），這裡寫作「GL」。
+Diamant stylus: ATN 95 E, elliptical 0,4 x 0,7 µm
+[校對註] 英文版寫「µm」，德文版（p12）與法文版（p14）同一欄都寫「0,4 x 0,7 mil」。
+Tracking force: 1,5 g / mN
+[校對註] 英、德、法三種語言版本都印「1,5 g / mN」，mN 前面沒有數字；p7 的表格寫「1,5 = 15 mN」。
+Frequency range: 20 Hz – 20000 Hz
+Output: 3,5 mV / 5 cms⁻¹ / 1 kHz
+Tracking capability (315 Hz): 80 µm
+Cartridge weight: 5,7 g
+Total capacitance (Tonearm leads and audio-cables): ca. 160 pF
+Dimensions (W x H x D) (mm): 440 x 119 x 360
+
+【檢索練習問題】
+這台唱盤的轉速有哪些？抖晃率多少？
+唱臂的有效長度是多少？
+原廠唱頭的輸出電壓是多少？

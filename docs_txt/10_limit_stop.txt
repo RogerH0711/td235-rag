@@ -1,0 +1,15 @@
+標題：Limit Stop
+中文標題：播放結束自動停止
+頁碼：11
+相關圖：Fig. 11 (p.10)
+資料類型：Thorens TD 235 原廠操作說明書英文原文（OCR 後人工校對）
+來源：Thorens TD 235 Operating Instructions, p.11
+
+【內容】
+When The pick-up cartridge has reached the lead-out groove the motor will be automatically switched off and the platter stops. Set lift-lever (5) to position ▼ and move tone arm back to its rest. (Fig. 11)
+
+[校對註] 「to position ▼」的 ▼ 是原文印的圖示，不是文字。同一個圖示在德文版中，對應英文「UP」（p10）和「DOWN」（p6）的位置都出現過，無法從原圖判斷這裡指哪一個。
+
+【檢索練習問題】
+唱片播完唱盤會自己停嗎？
+播完之後唱臂要怎麼收回？

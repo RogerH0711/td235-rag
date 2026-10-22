@@ -1,0 +1,20 @@
+# 秘密資訊：API key 只放 Colab Secrets，不進 repo
+.env
+.env.*
+*.key
+*secret*
+
+# 原始掃描 PDF（檔案大）與 OCR 用的頁面圖
+source_pdf/
+ocr/pages/
+
+# 解壓暫存、RAG01 匯出物（rag-data.zip 放 Drive，不進 git）
+rag_documents_*/
+rag_index_*/
+rag_loaded_*/
+rag-data.zip
+
+# 本機環境
+.venv/
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,26 @@
+標題：Mounting or exchanging a pick-up cartridge
+中文標題：安裝或更換唱頭
+頁碼：9
+相關圖：Fig. 7 (p.8), Fig. 8 (p.8), Fig. 9 (p.8)
+資料類型：Thorens TD 235 原廠操作說明書英文原文（OCR 後人工校對）
+來源：Thorens TD 235 Operating Instructions, p.9
+
+【內容】
+Instead of the factory-supplied pick-up cartridge any other cartridge with standard half-inch mounting holes and a weight between 3 and 10 grams can be installed. To do this loosen the collar-lock (9) and pull off the head shell (Fig. 7). Unscrew the cartridge and carefully remove the coloured signal leads from the cartridge pins with a pair of tweezers. Screw the new cartridge onto the head shell but do not tighten. Attach the leads to the pins while observing the correct coding, thus:
+
+R = Red, right channel
+RG = Green, right channel ground
+L = White, left channel
+LG = Blue, left channel ground
+
+Please note: The example shown in Fig. 8 is applicable only for the pick-up cartridge AT 95 E!
+
+For the precise adjustment of the so-called stylus overhang push the head shell with cartridge into the supplied mounting gauge. The adjustment is correct if the stylus is flush with the V-shaped recess in the gauge as viewed from above. When viewed from the side the stylus should be seen within the rectangular recess of the gauge (Fig. 9). Adjust the cartridge in the head shell until the correct positions are achieved. Lastly, tighten the mounting screws, put the head shell with cartridge back on the tone arm and tighten the collar-lock (9).
+
+ATTENTION!
+During these mounting and adjustment procedures you must be very careful not to damage the delicate stylus and cantilever by uncontrolled and brisk movements.
+
+【檢索練習問題】
+唱頭的訊號線要怎麼接？
+可以換別的唱頭嗎？重量有限制嗎？
+overhang 要怎麼調？

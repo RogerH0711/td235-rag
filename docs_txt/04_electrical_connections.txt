@@ -1,0 +1,16 @@
+標題：Electrical connections
+中文標題：電源與訊號線連接
+頁碼：5
+相關圖：Fig. 4 (p.4)
+資料類型：Thorens TD 235 原廠操作說明書英文原文（OCR 後人工校對）
+來源：Thorens TD 235 Operating Instructions, p.5
+
+【內容】
+By choosing the appropriate THORENS mains transformer this record player can be operated from nearly all existing public mains supplies. The low-voltage plug on the cable that is coming from the mains transformer unit is to be inserted into jack 17 (Fig. 4) at the rear side of the record player.
+
+The stereo signal leads have two phono plugs which are also known as "Cinch" or RCA-plugs. They are marked with either the letter "L" for the left channel or "R" for the right channel. If these letters are missing then most likely the right channel is marked red, perhaps by featuring a red plug at both ends, and the left channel is marked white or black accordingly. The RCA-plugs are inserted into the phono input jacks of an amplifier or receiver. The separate single litz-wire is making a connection to ground and is to be fastened underneath the ground screw of the amplifier or receiver.
+
+【檢索練習問題】
+電源變壓器的線要插在唱盤哪裡？
+RCA 線哪一條是左聲道、哪一條是右聲道？
+那條單獨的細線要接到哪裡？

@@ -1,0 +1,5 @@
+# 文字檔一律用 LF，Windows 與 macOS 之間同步時內容一致
+* text=auto eol=lf
+*.png binary
+*.zip binary
+*.pdf binary

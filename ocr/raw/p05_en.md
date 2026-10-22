@@ -1,0 +1,19 @@
+# Unpacking and set - up
+
+Take the record player and all accessories out of the carton. Remove the two transportation locks (Fig. 1) by applying lateral pressure. The locks are located underneath the platter at the front left and at the rear right.
+
+Put the platter onto the sub-platter and press down the two safety springs until they set into the groove of the platter spindle (Fig. 2).
+
+Insert each hinge into the respective recess (Fig. 3). Hold the dust cover parallel to the hinges (opening angle approximately 60°), insert and push as far as it will go. Being in this position the dust cover may be removed at any time.
+
+# Electrical connections
+
+By choosing the appropriate THORENS mains transformer this record player can be operated from nearly all existing public mains supplies. The low-voltage plug on the cable that is coming from the mains transformer unit is to be inserted into jack 17 (Fig. 4) at the rear side of the record player.
+
+The stereo signal leads have two phono plugs which are also known as "Cinch" or RCA-plugs. They are marked with either the letter "L" for the left channel or "R" for the right channel. If these letters are missing then most likely the right channel is marked red, perhaps by featuring a red plug at both ends, and the left channel is marked white or black accordingly. The RCA-plugs are inserted into the phono input jacks of an amplifier or receiver. The separate single litz-wire is making a connection to ground and is to be fastened underneath the ground screw of the amplifier or receiver.
+
+# IMPORTANT!
+
+ALWAYS KEEP THE SHIPPING CARTON IN A DRY PLACE FOR THE EVENT THAT THE RECORD PLAYER HAS TO BE PACKED AGAIN FOR TRANSPORTATION.
+
+IN THIS CASE IT IS IMPORTANT TO DETACH THE PLATTER AND PUT IT ON THE BOTTOM OF THE SHIPPINGBOX, JUST AS IT WAS ORIGINALLY DELIVERED TO YOU.

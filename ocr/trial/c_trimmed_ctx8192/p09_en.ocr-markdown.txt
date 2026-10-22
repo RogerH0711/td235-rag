@@ -1,0 +1,22 @@
+<!-- ocr engine=ollama model=qwen3-vl:4b-instruct mode=markdown profile=- -->
+<!-- page 1 -->
+# Mounting or exchanging a pick-up cartridge
+
+Instead of the factory-supplied pick-up cartridge any other cartridge with standard half-inch mounting holes and a weight between 3 and 10 grams can be installed. To do this loosen the collar-lock (9) and pull off the head shell (Fig. 7). Unscrew the cartridge and carefully remove the coloured signal leads from the cartridge pins with a pair of tweezers. Screw the new cartridge onto the head shell but do not tighten. Attach the leads to the pins while observing the correct coding, thus:
+
+R = Red, right channel
+RG = Green, right channel ground
+L = White, left channel
+LG = Blue, left channel ground
+
+Please note: The example shown in Fig. 8 is applicable only for the pick-up cartridge AT 95 E!
+
+For the precise adjustment of the so-called stylus overhang push the head shell with cartridge into the supplied mounting gauge. The adjustment is correct if the stylus is flush with the V-shaped recess in the gauge as viewed from above. When viewed from the side the stylus should be seen within the rectangular recess of the gauge (Fig. 9). Adjust the cartridge in the head shell until the correct positions are achieved. Lastly, tighten the mounting screws, put the head shell with cartridge back on the tone arm and tighten the collar-lock (9).
+
+**ATTENTION!**
+
+During these mounting and adjustment procedures you must be very careful not to damage the delicate stylus and cantilever by uncontrolled and brisk movements.
+
+# Replacing the stylus
+
+Any stylus is subject to wear even under normal playing conditions. Therefore, it is highly recommended to have the cartridge, respectively its stylus, inspected after about 500 hours of playing. This is because a worn or damaged stylus will eventually damage your precious vinyl records!

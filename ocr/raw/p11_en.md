@@ -1,0 +1,11 @@
+# Selecting Speed
+
+With the knob on the left the speed can be set at 33 and 45 rpm (Fig. 10)
+
+# Manual start and tone arm lift
+
+Bring the lift-lever (5) into position UP. Unlock the tone arm from its rest and move it above the lead-in groove of the record. The motor and platter will now start turning. By lowering the lift-lever (5) the tone arm gently declines, thus being very kind to your precious records. With the help of the lift-lever the tone arm may be moved up and down again anywhere across the record while the platter keeps turning (Fig. 11)
+
+# Limit Stop
+
+When The pick-up cartridge has reached the lead-out groove the motor will be automatically switched off and the platter stops. Set lift-lever (5) to position ▼ and move tone arm back to its rest. (Fig. 11)
