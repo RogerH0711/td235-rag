@@ -7,27 +7,30 @@
 | 步驟 | 狀態 |
 |---|---|
 | 6.1 OCR | ✅ 6 頁英文頁 OCR 完成，Claude 已初校。母本 `ocr/td235_manual_en.md` **待 Roger 校對確認** |
-| 6.2 `make_docs.py` | ✅ 11 篇 TXT＋`td235-docs.zip`（已上 Drive，檔案 ID `1I6bknLAUu3dU6QvowY6LuZOwqRO3SXin`）。中文標題與練習問題是 AI 初稿，**待 Roger 確認**（`ocr/annotations_zh.md`） |
+| 6.2 `make_docs.py` | ✅ 11 篇 TXT＋`td235-docs.zip`（已上 Drive，檔案 ID `1I6bknLAUu3dU6QvowY6LuZOwqRO3SXin`）。`ocr/annotations_zh.md` 的中文標題與練習問題 **Roger 已確認**（2026-10-22） |
 | 6.3 `RAG01.ipynb` | ✅ 在 Colab T4（學校帳號）整份跑過，老師的檢查全部通過 |
 | `rag-data.zip` | ✅ 28,322 bytes，sha256 `df8650a0…`。已上 Drive，檔案 ID `1_-jACKgzovK9Pmrdkmq1jNG23Fs_c258`；用 `urllib`、不登入實測可下載，sha256 和本機相同 |
 | 6.4 `RAG02.ipynb` | ✅ Colab 網頁「全部執行」跑通（真的呼叫 Groq）。**繳交用的 Colab 連結**：`https://colab.research.google.com/drive/1xaXf3ZbpQBZZU-ZBNK1ZhHHMU-V8RCOw?usp=sharing`（Drive 檔案 ID `1xaXf3ZbpQBZZU-ZBNK1ZhHHMU-V8RCOw`；不登入可下載，已確認內容和 repo 的 `RAG02.ipynb` 相同、輸出沒有金鑰） |
 | 7.1 人設 | ❌ `RAG02.ipynb` 第 9 節的 `PERSONA` 是暫時的中性句子，由 Roger 撰寫 |
-| 8.1／8.2 | 🔶 初步數據在 `docs/retrieval-eval.md`（用的是待確認的練習問題）。**還沒寫成 RAG01 的新增 cell** |
+| 8.1／8.2 | ✅ RAG01 第 13.1～13.3 節，練習問題確認後在 T4 正式重跑：A top-1 22/29、top-3 27/29；B（加中文標題）較差 → 維持 A；有答案和離題分數重疊，門檻維持 0.62（`docs/retrieval-eval.md` 最後一節）。13.3 的 `NO_ANSWER_QUESTIONS` Roger 已確認 |
 | 8.3～8.5 | ✅ 都在 RAG02：8.5 在第 12 節；8.3（Gradio 勾選並排純 LLM）、8.4（門檻 0.62）在新增的第 15.1 節＋第 16 節。Colab 網頁實測：門檻擋下「藍牙」✅；勾選對照並排 ✅（純 LLM 編出「220 V ±10%」，和說明書的 100–240 V 矛盾） |
-| 截圖（第 10 節） | 節點 1、4、6、8 ✅＋門檻、並排對照 ✅；節點 2、3 待截 |
-| git | 改動都已 commit；GitHub 上停在 `6a2474c`，之後的 commit **還沒 push** |
+| 截圖（第 10 節） | 節點 1、4、6、8 ✅＋門檻、並排對照 ✅；節點 5 ✅；節點 2、3 待截 |
+| git | 全部已 commit 並 push（2026-10-22） |
 
 ## 二、等 Roger 處理的
 
 1. 以後本機改了 RAG02，就到 Drive 用「管理版本 → 上傳新版本」更新（**先關掉 Colab 分頁**），連結不變；在 Colab 網頁上改的內容要下載回 repo
-2. **寫人設**（7.1）：取代 RAG02 第 9 節的 `PERSONA`。需要的話 Claude 可以提 2～3 個方向。定稿 prompt 時一起處理：模型仍會在結尾加「請參考官方維修手冊」（規則 3 已寫明不要，它還是寫；見 `docs/ai-usage-log.md`）
-3. **校對母本**、**確認 `ocr/annotations_zh.md`**（同上次）。練習問題是檢索評估的測試題，定稿後要重跑評估
+2. **寫人設**（7.1）：取代 RAG02 第 9 節的 `PERSONA`。需要的話 Claude 可以提 2～3 個方向。定稿 prompt 時一起處理這些實測問題（細節見 `docs/ai-usage-log.md`）：
+   - 模型有時會在結尾加「請參考官方維修手冊」（規則 3 已寫明不要）
+   - 有時只寫「見 Fig. 10」，沒寫圖在 p.10（規則 6）
+   - 整理規格時抄錯：把 GL（左聲道接地）寫成左聲道、把 cms⁻¹ 寫成 cm⁻¹；遇到有 `[校對註]` 的數值（µm／mil、1,5 g / mN）沒有說明不一致（規則 9）
+3. **校對母本**（`ocr/td235_manual_en.md`）
 4. 截圖節點 2、3
 
 ## 三、下一步（Claude）
 
-1. **8.1／8.2 寫成 RAG01 的新增 cell**（第 13 節後，標「🔧 新增」）：練習問題 → top-1／top-3 命中率表；A/B 另建暫時索引比較，不影響匯出的索引。練習問題定稿後在 T4 上重跑，結果更新到 `docs/retrieval-eval.md`
-2. **8.4 門檻**：暫定 0.62（依據在 RAG02 第 15.1 節和 `docs/retrieval-eval.md`）。8.1 正式評估時加更多離題題、口語寫法，重新檢查這個值
+1. `NO_ANSWER_QUESTIONS` 或母本有改的話，在 T4 上重跑 RAG01（`colab exec`，用複本跑，輸出存成 repo 的 `RAG01_output.ipynb`），更新 `docs/retrieval-eval.md`
+2. 母本有改的話要照「重建規則」重建，`rag-data.zip` 用「管理版本」更新
 3. 8.6 多輪對話、8.7 第二知識來源都是選做，**要先問 Roger**
 4. 每次改完 RAG02，用測試版在 CLI 上跑一次（做法見第四節）
 
@@ -39,6 +42,7 @@
 
 - repo 在 `~/code/td235-rag`，`origin` 是 `https://github.com/RogerH0711/td235-rag.git`，可以直接 push
 - `tools/make_docs.py` 只用標準函式庫：`python3 tools/make_docs.py`
+  - ⚠ Mac 的 zlib 和 ROG 不同，**內容沒變也會壓出不同位元組的 `td235-docs.zip`**。跑完先看 `git status`：只有 zip 變、`docs_txt/` 沒變，就用 `git checkout -- td235-docs.zip` 還原，Drive 上那份才不用重傳
 - 本機 python.org 版的 `python3` 沒裝 CA 憑證，`urllib` 連 HTTPS 會 `CERTIFICATE_VERIFY_FAILED`。測下載網址改用 macOS 內建的 `/usr/bin/python3`（或 `curl -sSL`）
 - **Colab CLI**：`google-colab-cli` 0.7.5（uv tool），已用學校帳號 `f74146115@gs.ncku.edu.tw` 登入（`colab whoami` 確認；token 在 `~/.config/colab-cli/`，不進 repo）
   - 學校帳號配得到 T4：`colab new -s rag01 --gpu T4`
