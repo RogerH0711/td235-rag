@@ -1,7 +1,5 @@
 # F74146115 資訊二 謝承祐 TD 235 唱盤技師
 
-> 繳交說明初稿（Claude 擬稿，待我修改）。標 **〔待補〕** 的地方由我自己寫或補截圖。
-
 ## 1. 程式連結與執行方式
 
 - **RAG02（對話機器人）Colab 連結**：https://colab.research.google.com/drive/1xaXf3ZbpQBZZU-ZBNK1ZhHHMU-V8RCOw?usp=sharing
