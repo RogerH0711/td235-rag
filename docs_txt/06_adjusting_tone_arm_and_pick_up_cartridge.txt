@@ -12,9 +12,9 @@ Screw the tonearm counter weight (3) onto the rear tonearm tube (Fig. 5).
 
 Unlock the tone arm (4) and move it a bit towards the centre of the platter. Bring the lift-lever (5) into position DOWN while holding back the tone arm (Fig. 6).
 
-By turning the counter weight (3) the tone arm can be precisely balanced in order to make it hover freely above the platter. Move the tone arm back to its rest. You can now adjust the tracking force (1) and the anti-skating force (2). Adjust to 1.5 mN for the factory-installed pick-up cartridge AT 95 E. As for the required anti-skating force refer to the table below:
+By turning the counter weight (3) the tone arm can be precisely balanced in order to make it hover freely above the platter. Move the tone arm back to its rest. You can now adjust the tracking force (1) and the anti-skating force (2). Adjust to 15 mN〔校正：原文誤印為 1.5 mN〕 for the factory-installed pick-up cartridge AT 95 E. As for the required anti-skating force refer to the table below:
 
-[校對註] 英文原文寫「1.5 mN」，但同頁下方表格為「1,5 = 15 mN」，德文版（p6）與法文版（p7 右欄）此處都寫「15 mN」。
+[校對註] 已校正：英文原文這裡印「1.5 mN」。同頁下方表格為「1,5 = 15 mN」，德文版（p6）與法文版（p7 右欄）此處都寫「15 mN」，依此校正為 15 mN。
 
 Scale  Tracking force  Anti-skating force
 1 = 10 mN 1

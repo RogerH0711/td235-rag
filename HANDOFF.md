@@ -6,33 +6,29 @@
 
 | 步驟 | 狀態 |
 |---|---|
-| 6.1 OCR | ✅ 6 頁英文頁 OCR 完成，Claude 已初校。母本 `ocr/td235_manual_en.md` **待 Roger 校對確認** |
+| 6.1 OCR | ✅ Roger 確認 OCR 文字正確（2026-10-23）。說明書本身印錯的 5 處已在母本校正（內文改成校正後寫法＋「[校對註] 已校正」）；▼ 在英、德文版都只有圖示，依操作順序推斷為 UP（註記標「推斷」） |
 | 6.2 `make_docs.py` | ✅ 11 篇 TXT＋`td235-docs.zip`（已上 Drive，檔案 ID `1I6bknLAUu3dU6QvowY6LuZOwqRO3SXin`）。`ocr/annotations_zh.md` 的中文標題與練習問題 **Roger 已確認**（2026-10-22） |
 | 6.3 `RAG01.ipynb` | ✅ 在 Colab T4（學校帳號）整份跑過，老師的檢查全部通過 |
-| `rag-data.zip` | ✅ 28,322 bytes，sha256 `df8650a0…`。已上 Drive，檔案 ID `1_-jACKgzovK9Pmrdkmq1jNG23Fs_c258`；用 `urllib`、不登入實測可下載，sha256 和本機相同 |
+| `rag-data.zip` | ✅ 內文加〔校正〕〔推斷〕標記後重建：28,364 bytes，sha256 `9c62dfef…`。已上 Drive（檔案 ID `1_-jACKgzovK9Pmrdkmq1jNG23Fs_c258`），不登入下載確認相同 |
 | 6.4 `RAG02.ipynb` | ✅ Colab 網頁「全部執行」跑通（真的呼叫 Groq）。**繳交用的 Colab 連結**：`https://colab.research.google.com/drive/1xaXf3ZbpQBZZU-ZBNK1ZhHHMU-V8RCOw?usp=sharing`（Drive 檔案 ID `1xaXf3ZbpQBZZU-ZBNK1ZhHHMU-V8RCOw`；不登入可下載，已確認內容和 repo 的 `RAG02.ipynb` 相同、輸出沒有金鑰） |
-| 7.1 人設 | ❌ `RAG02.ipynb` 第 9 節的 `PERSONA` 是暫時的中性句子，由 Roger 撰寫 |
+| 7.1 人設 | ✅ 2026-10-23 定案並在網頁實測（開場白、語氣、口頭禪都有出現）。實測發現模型沒照規則 9 說明「原文印的值」和「推斷」，還編了「圖示向上」→ 規則 9 改寫後再測，問題仍在 → Roger 選 (A) 在內文加〔校正〕〔推斷〕標記、重建（10/23 15.07 重測）：「圖示向上」和旋鈕混淆都消失，但模型仍不主動說原文印錯／是推斷 |
 | 8.1／8.2 | ✅ RAG01 第 13.1～13.3 節，練習問題確認後在 T4 正式重跑：A top-1 22/29、top-3 27/29；B（加中文標題）較差 → 維持 A；有答案和離題分數重疊，門檻維持 0.62（`docs/retrieval-eval.md` 最後一節）。13.3 的 `NO_ANSWER_QUESTIONS` Roger 已確認 |
 | 8.3～8.5 | ✅ 都在 RAG02：8.5 在第 12 節；8.3（Gradio 勾選並排純 LLM）、8.4（門檻 0.62）在新增的第 15.1 節＋第 16 節。Colab 網頁實測：門檻擋下「藍牙」✅；勾選對照並排 ✅（純 LLM 編出「220 V ±10%」，和說明書的 100–240 V 矛盾） |
-| 截圖（第 10 節） | 節點 1、4、6、8 ✅＋門檻、並排對照 ✅；節點 5 ✅；節點 2、3 待截 |
-| git | 全部已 commit 並 push（2026-10-22） |
+| 截圖（第 10 節） | 節點 1、4、5、6、7、8 ✅；7.3 各類問題 ✅（10/23 14.29～14.32 六張）；節點 2、3 待截 |
+| git | `8798a15` 已 push；人設與校正的改動**還沒 commit** |
 
 ## 二、等 Roger 處理的
 
-1. 以後本機改了 RAG02，就到 Drive 用「管理版本 → 上傳新版本」更新（**先關掉 Colab 分頁**），連結不變；在 Colab 網頁上改的內容要下載回 repo
-2. **寫人設**（7.1）：取代 RAG02 第 9 節的 `PERSONA`。需要的話 Claude 可以提 2～3 個方向。定稿 prompt 時一起處理這些實測問題（細節見 `docs/ai-usage-log.md`）：
-   - 模型有時會在結尾加「請參考官方維修手冊」（規則 3 已寫明不要）
-   - 有時只寫「見 Fig. 10」，沒寫圖在 p.10（規則 6）
-   - 整理規格時抄錯：把 GL（左聲道接地）寫成左聲道、把 cms⁻¹ 寫成 cm⁻¹；遇到有 `[校對註]` 的數值（µm／mil、1,5 g / mN）沒有說明不一致（規則 9）
-3. **校對母本**（`ocr/td235_manual_en.md`）
-4. 截圖節點 2、3
+1. **寫「我的理解」**：`docs/ai-usage-log.md` 共 13 筆。寫法與每筆的提示見 2026-10-23 Claude 的說明（之後會整理進繳交說明）
+2. **針壓／▼**：(A) 已完成並重測（Drive 上兩個檔案已驗證是新版）。Roger 決定**不**再由程式附上標記；繳交說明把「模型不主動說原文印錯／是推斷」寫成已知限制（完整文件裡看得到標記）
+3. 截圖節點 2、3
+4. 以後本機改了 RAG02，就到 Drive 用「管理版本 → 上傳新版本」更新（**先關掉 Colab 分頁**），連結不變；在 Colab 網頁上改的內容要下載回 repo
 
 ## 三、下一步（Claude）
 
-1. `NO_ANSWER_QUESTIONS` 或母本有改的話，在 T4 上重跑 RAG01（`colab exec`，用複本跑，輸出存成 repo 的 `RAG01_output.ipynb`），更新 `docs/retrieval-eval.md`
-2. 母本有改的話要照「重建規則」重建，`rag-data.zip` 用「管理版本」更新
-3. 8.6 多輪對話、8.7 第二知識來源都是選做，**要先問 Roger**
-4. 每次改完 RAG02，用測試版在 CLI 上跑一次（做法見第四節）
+1. Roger 更新 Colab 上的 RAG02 後：不登入下載，確認和 repo 相同、輸出沒有金鑰
+2. 擬繳交說明初稿（給助教和老師看）：使用資料說明、人設、加分功能、AI 使用說明
+3. 8.6 多輪對話、8.7 第二知識來源都是選做，**要先問 Roger**（目前建議先不做）
 
 **重建規則**：母本或 `annotations_zh.md` 有改 → 跑 `make_docs.py` → zip 的 sha256 有變，就到 Drive 用「管理版本 → 上傳新版本」覆蓋（檔案 ID 不變）→ 從 RAG01 第 7 節起重建 → 新的 `rag-data.zip` 也用同樣方式更新到 Drive。
 

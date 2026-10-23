@@ -20,12 +20,12 @@ Effective tonearm length: 211 mm
 Offset angle: 26°
 Overhang: 19,5 mm
 Tangential tracking error: 0,15° / cm Rad.
-Cartridge: HiFi DIN 45 500, AT 95 E — rot R right channel; grün RG right channel ground; blau GL left channel ground; weiß L left channel
-[校對註] 藍色線在 p9 寫作「LG」（Blue, left channel ground），這裡寫作「GL」。
-Diamant stylus: ATN 95 E, elliptical 0,4 x 0,7 µm
-[校對註] 英文版寫「µm」，德文版（p12）與法文版（p14）同一欄都寫「0,4 x 0,7 mil」。
-Tracking force: 1,5 g / mN
-[校對註] 英、德、法三種語言版本都印「1,5 g / mN」，mN 前面沒有數字；p7 的表格寫「1,5 = 15 mN」。
+Cartridge: HiFi DIN 45 500, AT 95 E — rot R right channel; grün RG right channel ground; blau LG〔校正：原文印 GL〕 left channel ground; weiß L left channel
+[校對註] 已校正：原文這裡印「GL」。p9 的接線說明寫作「LG」（Blue, left channel ground），依 p9 統一為 LG。
+Diamant stylus: ATN 95 E, elliptical 0,4 x 0,7 mil〔校正：英文版原文印 µm〕
+[校對註] 已校正：英文版原文印「µm」。德文版（p12）與法文版（p14）同一欄都寫「0,4 x 0,7 mil」，依此校正為 mil。
+Tracking force: 1,5 g / 15 mN〔校正：原文 mN 前少了數字，依 p7 表格補上 15〕
+[校對註] 已校正：英、德、法三種語言版本都印「1,5 g / mN」，mN 前面少了數字。依 p7 表格「1,5 = 15 mN」補上 15。
 Frequency range: 20 Hz – 20000 Hz
 Output: 3,5 mV / 5 cms⁻¹ / 1 kHz
 Tracking capability (315 Hz): 80 µm

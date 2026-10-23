@@ -6,9 +6,9 @@
 來源：Thorens TD 235 Operating Instructions, p.11
 
 【內容】
-When The pick-up cartridge has reached the lead-out groove the motor will be automatically switched off and the platter stops. Set lift-lever (5) to position ▼ and move tone arm back to its rest. (Fig. 11)
+When The pick-up cartridge has reached the lead-out groove the motor will be automatically switched off and the platter stops. Set lift-lever (5) to position UP〔推斷：原文只印圖示 ▼，沒有文字〕 and move tone arm back to its rest. (Fig. 11)
 
-[校對註] 「to position ▼」的 ▼ 是原文印的圖示，不是文字。同一個圖示在德文版中，對應英文「UP」（p10）和「DOWN」（p6）的位置都出現過，無法從原圖判斷這裡指哪一個。
+[校對註] 已校正（推斷）：英文原文這裡印的是圖示「▼」，不是文字；德文版（p10）同一句也只有圖示。說明書裡同一個圖示同時用在「升起」和「降下」的位置，無法從印刷判斷；依操作順序（先把唱臂升起，再移回唱臂架）推斷為 UP。
 
 【檢索練習問題】
 唱片播完唱盤會自己停嗎？

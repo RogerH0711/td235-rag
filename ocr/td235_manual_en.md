@@ -2,9 +2,10 @@
 Thorens TD 235 Operating Instructions：英文原文母本
 來源：source_pdf/ 的 3、5、7、9、11、13.pdf 第 1 頁英文欄（p13 為全頁表格）
 OCR：pdf2md + Ollama qwen3-vl:4b-instruct（markdown 模式、--ctx 8192），未校對的輸出在 ocr/raw/
-校對：2026-10-22 Claude 初校（逐句對照原圖）；Roger 確認：待確認
+校對：2026-10-22 Claude 初校（逐句對照原圖）；2026-10-23 Roger 確認 OCR 文字正確
 規則：
 - 內文照原文照錄，包含原文的拼字錯誤（weightes、Diamant、When The…）
+- 例外：原廠說明書本身印錯或無法判斷的 5 處（2026-10-23 Roger 決定；其中 Limit Stop 的 ▼ 是依操作順序推斷），內文改成校正後的寫法，緊接著用「〔校正：…〕」或「〔推斷：…〕」標出原文印的是什麼（讓模型照抄內文時一起帶到），下一行的「[校對註] 已校正」再寫依據
 - 以「[校對註]」開頭的行是校對者加的說明，不是原文
 - 插圖印在偶數德文頁：Fig. 1–4 → p4、Fig. 5–6 → p6、Fig. 7–9 → p8、Fig. 10–11 → p10
 -->
@@ -64,9 +65,9 @@ Screw the tonearm counter weight (3) onto the rear tonearm tube (Fig. 5).
 
 Unlock the tone arm (4) and move it a bit towards the centre of the platter. Bring the lift-lever (5) into position DOWN while holding back the tone arm (Fig. 6).
 
-By turning the counter weight (3) the tone arm can be precisely balanced in order to make it hover freely above the platter. Move the tone arm back to its rest. You can now adjust the tracking force (1) and the anti-skating force (2). Adjust to 1.5 mN for the factory-installed pick-up cartridge AT 95 E. As for the required anti-skating force refer to the table below:
+By turning the counter weight (3) the tone arm can be precisely balanced in order to make it hover freely above the platter. Move the tone arm back to its rest. You can now adjust the tracking force (1) and the anti-skating force (2). Adjust to 15 mN〔校正：原文誤印為 1.5 mN〕 for the factory-installed pick-up cartridge AT 95 E. As for the required anti-skating force refer to the table below:
 
-[校對註] 英文原文寫「1.5 mN」，但同頁下方表格為「1,5 = 15 mN」，德文版（p6）與法文版（p7 右欄）此處都寫「15 mN」。
+[校對註] 已校正：英文原文這裡印「1.5 mN」。同頁下方表格為「1,5 = 15 mN」，德文版（p6）與法文版（p7 右欄）此處都寫「15 mN」，依此校正為 15 mN。
 
 Scale  Tracking force  Anti-skating force
 1 = 10 mN 1
@@ -110,9 +111,9 @@ Bring the lift-lever (5) into position UP. Unlock the tone arm from its rest and
 
 ## Limit Stop
 
-When The pick-up cartridge has reached the lead-out groove the motor will be automatically switched off and the platter stops. Set lift-lever (5) to position ▼ and move tone arm back to its rest. (Fig. 11)
+When The pick-up cartridge has reached the lead-out groove the motor will be automatically switched off and the platter stops. Set lift-lever (5) to position UP〔推斷：原文只印圖示 ▼，沒有文字〕 and move tone arm back to its rest. (Fig. 11)
 
-[校對註] 「to position ▼」的 ▼ 是原文印的圖示，不是文字。同一個圖示在德文版中，對應英文「UP」（p10）和「DOWN」（p6）的位置都出現過，無法從原圖判斷這裡指哪一個。
+[校對註] 已校正（推斷）：英文原文這裡印的是圖示「▼」，不是文字；德文版（p10）同一句也只有圖示。說明書裡同一個圖示同時用在「升起」和「降下」的位置，無法從印刷判斷；依操作順序（先把唱臂升起，再移回唱臂架）推斷為 UP。
 
 <!-- page: 13 -->
 
@@ -132,12 +133,12 @@ Effective tonearm length: 211 mm
 Offset angle: 26°
 Overhang: 19,5 mm
 Tangential tracking error: 0,15° / cm Rad.
-Cartridge: HiFi DIN 45 500, AT 95 E — rot R right channel; grün RG right channel ground; blau GL left channel ground; weiß L left channel
-[校對註] 藍色線在 p9 寫作「LG」（Blue, left channel ground），這裡寫作「GL」。
-Diamant stylus: ATN 95 E, elliptical 0,4 x 0,7 µm
-[校對註] 英文版寫「µm」，德文版（p12）與法文版（p14）同一欄都寫「0,4 x 0,7 mil」。
-Tracking force: 1,5 g / mN
-[校對註] 英、德、法三種語言版本都印「1,5 g / mN」，mN 前面沒有數字；p7 的表格寫「1,5 = 15 mN」。
+Cartridge: HiFi DIN 45 500, AT 95 E — rot R right channel; grün RG right channel ground; blau LG〔校正：原文印 GL〕 left channel ground; weiß L left channel
+[校對註] 已校正：原文這裡印「GL」。p9 的接線說明寫作「LG」（Blue, left channel ground），依 p9 統一為 LG。
+Diamant stylus: ATN 95 E, elliptical 0,4 x 0,7 mil〔校正：英文版原文印 µm〕
+[校對註] 已校正：英文版原文印「µm」。德文版（p12）與法文版（p14）同一欄都寫「0,4 x 0,7 mil」，依此校正為 mil。
+Tracking force: 1,5 g / 15 mN〔校正：原文 mN 前少了數字，依 p7 表格補上 15〕
+[校對註] 已校正：英、德、法三種語言版本都印「1,5 g / mN」，mN 前面少了數字。依 p7 表格「1,5 = 15 mN」補上 15。
 Frequency range: 20 Hz – 20000 Hz
 Output: 3,5 mV / 5 cms⁻¹ / 1 kHz
 Tracking capability (315 Hz): 80 µm
